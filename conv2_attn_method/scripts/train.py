@@ -26,14 +26,14 @@ from utils.plot_history import plot_history
 # ==================== Config ====================
 DATA_DIR = "/data/users/dyx/Myproject/FetalPlaneClass/data/dataset/dataset"
 OUTPUT_DIR = "/data/users/dyx/Myproject/FetalPlaneClass/output/conv2_attn_method/polar/none"
-EXCEL_PATH = "/data/users/dyx/Myproject/FetalPlaneClass/data/dataset/RSFetalPlanes/dataset.xlsx"
+EXCEL_PATH = "/data/users/dyx/Myproject/FetalPlaneClass/data/dataset/RSFetalPlanes/RSCLSdataset.xlsx"
 
 MODEL = "convnextv2_tiny"  # tiny / base / large
 NUM_CLASSES = 22
 PRETRAINED = True
 
 
-EPOCHS = 150
+EPOCHS = 200
 BATCH_SIZE = 256
 NUM_WORKERS = 16
 AMP = "bf16"                # "bf16", "fp16", or "none"
@@ -58,8 +58,8 @@ def set_seed(seed: int):
     np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
-    torch.backends.cudnn.deterministic = False
-    torch.backends.cudnn.benchmark = True
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
 
 def format_seconds(seconds: float) -> str:
     seconds = int(round(seconds))
