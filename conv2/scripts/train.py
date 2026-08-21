@@ -21,9 +21,9 @@ from utils.plot_history import plot_history
 # ==================== Config ====================
 DATA_DIR = "/data/users/dyx/Myproject/FetalPlaneClass/data/dataset/dataset"
 OUTPUT_DIR = "/data/users/dyx/Myproject/FetalPlaneClass/output/conv2/large"
-EXCEL_PATH = "/data/users/dyx/Myproject/FetalPlaneClass/data/dataset/RSFetalPlanes/dataset_rm_badtest.xlsx"
+EXCEL_PATH = "/data/users/dyx/Myproject/FetalPlaneClass/data/dataset/RSFetalPlanes/RSCLSdataset.xlsx"
 
-MODEL = "convnextv2_large"  # tiny / base / large
+MODEL = "convnextv2_tiny"  # tiny / base / large
 NUM_CLASSES = 22
 PRETRAINED = True
 
